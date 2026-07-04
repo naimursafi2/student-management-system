@@ -3,7 +3,7 @@ const router = express.Router();
 const LoginRoutes = require("./LoginRoutes")
 const RegistrationRoutes = require("./registrationRoutes")
 
-const authRoutes = router.get("/auth", LoginRoutes);
-// const authRoutes = router.get("/auth", RegistrationRoutes);
+ router.use("/auth", LoginRoutes);
+ router.use("/auth", RegistrationRoutes);
 
-module.exports = authRoutes;
+module.exports = router;

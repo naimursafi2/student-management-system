@@ -1,8 +1,7 @@
 const express = require("express");
+const Registration = require("../../controllers/authControllers/Registration");
 const router = express.Router();
 
-const RegistrationRoutes = router.get("/registrationRoutes", (req, res) => {
-  res.send("aita login route");
-});
+const RegistrationRoutes = router.post("/registration", Registration);
 
 module.exports = RegistrationRoutes;
